@@ -1,0 +1,38 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <h4 class="presentation">{{ nom }}</h4>
+            <div class="nav flex-column">
+                <small class="nav-link">{{ contenu }}</small>
+            </div>
+        </div>
+            {{ render(controller(
+                'App\\Controller\\HomeController::menuCategory'
+            )) }}
+        <div class="col-md-3">
+            <h4 class="contakt">Rejoignez-nous sur :</h4>
+            <p>
+                <nav class="nav">
+                    <a class="nav-link" href="#"><i class="icon-twitter"></i></a>
+                    <a class="nav-link" href="#"><i class="icon-facebook2"></i></a>
+                    <a class="nav-link" href="#"><i class="icon-google-plus2"></i></a>
+                </nav>
+            </p>
+            <hr>
+            <div class="nav flex-column">
+                <a class="nav-link" href="#"><i class="icon-phone"> </i> {{ tel }}</a>
+                <a class="nav-link" href="mailto:mohamed@yahoo.fr"><i class="icon-mail"> </i> {{ mail }}</a>
+                <a class="nav-link" href="#"><i class="icon-bubbles4"> </i> {{ live }}</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="copyriht">
+                <small>&copy; {{ "now"|date('Y') }} BabaCoolCar - Tous droits réservés.</small>
+            </p>
+        </div>
+    </div>
+</div>

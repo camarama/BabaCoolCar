@@ -1,0 +1,14 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+        {{ dump(trajet) }}
+
+    {% for trajet in trajet.etapes %}
+        {{ dump(trajet) }}
+    {% endfor %}
+
+    {#{% for trajet in trajet.membre %}#}
+        {#{{ dump(trajet.membre) }}#}
+    {#{% endfor %}#}
+{% endblock %}

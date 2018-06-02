@@ -1,0 +1,13 @@
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: App\Entity\Membre
+    from_email:
+        address: "mamed@gmail.com"
+        sender_name: "covoit_test"
+    registration:
+        form:
+            type: App\Form\RegistrationType
+#    profile:
+#        form:
+#            type: App\Form\ProfileFormType

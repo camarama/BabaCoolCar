@@ -1,0 +1,10 @@
+{% for category in categories %}
+    <div class="col-md-3">
+        <h4>{{ category.nom }}</h4>
+        {% for page in category.pages %}
+            <div class="nav flex-column">
+                <a class="nav-link" href="{{ path('page', { 'id' : page.id }) }}">{{ page.titre }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}

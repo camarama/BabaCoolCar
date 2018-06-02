@@ -1,0 +1,49 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+    {% for adresse in adresse %}
+        {% for etape in adresse.etapes %}
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="..." alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <p class="card-title h6 text-capitalize"><em>{{ etape.trajet.membre.membre.prenom }}</em></p>
+                    <h5 class="card-text">
+                        <p class="h6">De {{ adresse.lieudepart }} à {{ adresse.lieudestination }}</p>
+                        <p class="h4">{{ etape.prixetape }} FG
+                            <small class="text-muted">- par place</small>
+                        </p>
+                        {% if etape.trajet.nbplace > 1 %}
+                            <p class="text-center">
+                                <a class="btn btn-primary"
+                                   href="{{ path('traitement_recherche', {'id' : etape.trajet.id}) }}">
+                                    {{ etape.trajet.nbplace }}
+                                    places restantes
+                                </a>
+                            </p>
+                        {% elseif etape.trajet.nbplace < 1 %}
+                            <p class="text-center">{{ etape.trajet.nbplace }} Complet</p>
+                        {% else %}
+                            <p class="text-center">
+                                <a class="btn btn-primary"
+                                   href="{{ path('traitement_recherche', {'id' : etape.trajet.id}) }}">
+                                    {{ etape.trajet.nbplace }}
+                                    place restante
+                                </a>
+                            </p>
+                        {% endif %}
+                    </h5>
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
+{#
+    {{ dump(adresse) }}
+
+{% for adresse in adresse %}
+    {% for etape in adresse.etapes %}
+        {{ dump(etape.nometape) }}
+        {% endfor %}
+{% endfor %}
+#}
