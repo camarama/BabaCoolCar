@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74e6b5b7-ff3f-44f4-94f9-6880afc51918" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180614130813.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" afterPath="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ORM/TrajetFixtures.php" afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/TrajetFixtures.php" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Trajet.php" afterPath="$PROJECT_DIR$/src/Entity/Trajet.php" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Vehicule.php" afterPath="$PROJECT_DIR$/src/Entity/Vehicule.php" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AdresseRepository.php" afterPath="$PROJECT_DIR$/src/Repository/AdresseRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TrajetRepository.php" afterPath="$PROJECT_DIR$/src/Repository/TrajetRepository.php" />
-      <change beforePath="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" afterPath="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" afterPath="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,10 +30,10 @@
       <file leaf-file-name="RechercheTrajetController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/RechercheTrajetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#2064#2106#0#PHP" expanded="true" />
+                <element signature="e#2037#2079#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +125,8 @@
         <option value="$PROJECT_DIR$/src/DataFixtures/ORM/TrajetFixtures.php" />
         <option value="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/TrajetRepository.php" />
-        <option value="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" />
         <option value="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" />
       </list>
     </option>
   </component>
@@ -441,12 +433,12 @@
       <workItem from="1528364971497" duration="4943000" />
       <workItem from="1528442870187" duration="21227000" />
       <workItem from="1528714914255" duration="1175000" />
-      <workItem from="1528964148397" duration="12665000" />
+      <workItem from="1528964148397" duration="13209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354525000" />
+    <option name="totallyTimeSpent" value="355069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,10 +861,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RechercheTrajetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#2064#2106#0#PHP" expanded="true" />
+            <element signature="e#2037#2079#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

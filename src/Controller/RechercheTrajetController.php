@@ -28,7 +28,7 @@ class RechercheTrajetController extends Controller
     /**
      * @Route("/recherche_trajet", name="recherche-trajet")
      */
-    public function rechercheTrajet(EntityManagerInterface $em, Request $request, SessionInterface $session)
+    public function rechercheTrajet(EntityManagerInterface $em, Request $request)
     {
         $form = $this->createForm(RechercheTrajetType::class);
 
