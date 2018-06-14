@@ -21,35 +21,35 @@ class TrajetFixtures extends Fixture
         $adresse5 = $this->getReference('adresse5');
 
          $trajet1 = new Trajet();
-         $trajet1->setMembre($vehicule1);
+         $trajet1->setVehicule($vehicule1);
          $trajet1->setCreatedAt(new \DateTime('now'));
          $trajet1->setDatedepart(new \DateTime('tomorrow'));
          $trajet1->setNbplace(2);
          $manager->persist($trajet1);
 
         $trajet2 = new Trajet();
-        $trajet2->setMembre($vehicule2);
+        $trajet2->setVehicule($vehicule2);
         $trajet2->setCreatedAt(new \DateTime('tomorrow'));
         $trajet2->setDatedepart(new \DateTime('+10 days'));
         $trajet2->setNbplace(4);
         $manager->persist($trajet2);
 
         $trajet3 = new Trajet();
-        $trajet3->setMembre($vehicule1);
+        $trajet3->setVehicule($vehicule1);
         $trajet3->setCreatedAt(new \DateTime('now'));
         $trajet3->setDatedepart(new \DateTime('+3 days'));
         $trajet3->setNbplace(4);
         $manager->persist($trajet3);
 
         $trajet4 = new Trajet();
-        $trajet4->setMembre($vehicule2);
+        $trajet4->setVehicule($vehicule2);
         $trajet4->setCreatedAt(new \DateTime('+5 days'));
         $trajet4->setDatedepart(new \DateTime('+3 days'));
         $trajet4->setNbplace(1);
         $manager->persist($trajet4);
 
         $trajet5 = new Trajet();
-        $trajet5->setMembre($vehicule1);
+        $trajet5->setVehicule($vehicule1);
         $trajet5->setCreatedAt(new \DateTime('+7 days'));
         $trajet5->setDatedepart(new \DateTime('+2 days'));
         $trajet5->setNbplace(5);

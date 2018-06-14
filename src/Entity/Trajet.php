@@ -40,7 +40,7 @@ class Trajet
      * @ORM\ManyToOne(targetEntity="App\Entity\Vehicule", inversedBy="trajets")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $membre;
+    private $vehicule;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Etape", mappedBy="trajet")
@@ -113,16 +113,20 @@ class Trajet
         return $this;
     }
 
-    public function getMembre(): ?Vehicule
+    /**
+     * @return mixed
+     */
+    public function getVehicule()
     {
-        return $this->membre;
+        return $this->vehicule;
     }
 
-    public function setMembre(?Vehicule $membre): self
+    /**
+     * @param mixed $vehicule
+     */
+    public function setVehicule($vehicule): void
     {
-        $this->membre = $membre;
-
-        return $this;
+        $this->vehicule = $vehicule;
     }
 
     /**

@@ -41,7 +41,7 @@ class Vehicule
     private $marque;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Trajet", mappedBy="membre")
+     * @ORM\OneToMany(targetEntity="App\Entity\Trajet", mappedBy="vehicule")
      */
     private $trajets;
 
@@ -115,7 +115,7 @@ class Vehicule
     {
         if (!$this->trajets->contains($trajet)) {
             $this->trajets[] = $trajet;
-            $trajet->setMembre($this);
+            $trajet->setVehicule($this);
         }
 
         return $this;
@@ -126,8 +126,8 @@ class Vehicule
         if ($this->trajets->contains($trajet)) {
             $this->trajets->removeElement($trajet);
             // set the owning side to null (unless already changed)
-            if ($trajet->getMembre() === $this) {
-                $trajet->setMembre(null);
+            if ($trajet->getVehicule() === $this) {
+                $trajet->setVehicule(null);
             }
         }
 

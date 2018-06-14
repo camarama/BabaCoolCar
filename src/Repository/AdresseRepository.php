@@ -26,14 +26,14 @@ class AdresseRepository extends ServiceEntityRepository
             ->setParameter('depart', $depart)
             ->andWhere('a.lieudestination like :dest')
             ->setParameter('dest', $dest)
-            ->leftJoin('a.etapes', 'e')
+           /* ->leftJoin('a.etapes', 'e')
             ->addSelect('e')
             ->leftJoin('e.trajet', 't')
             ->addSelect('t')
             ->leftJoin('t.membre', 'm')
             ->addSelect('m')
             ->leftJoin('m.membre', 'u')
-            ->addSelect('u')
+            ->addSelect('u')*/
             ->orderBy('a.lieudepart', 'ASC')
             ->getQuery();
 

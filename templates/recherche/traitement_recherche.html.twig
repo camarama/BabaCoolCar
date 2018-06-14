@@ -3,12 +3,21 @@
 {% block body %}
 
         {{ dump(trajet) }}
-
-    {% for trajet in trajet.etapes %}
-        {{ dump(trajet) }}
+        {{ dump(vehicule) }}
+        {{ dump(vehicule.membre) }}
+    {% for etape in trajet.etapes %}
+        {{ dump(etape) }}
+        {{ dump(etape.adresse) }}
     {% endfor %}
+        {#{{ dump(etape) }}#}
+        {#{{ dump(trajet.etape.adresse) }}#}
 
-    {#{% for trajet in trajet.membre %}#}
-        {#{{ dump(trajet.membre) }}#}
-    {#{% endfor %}#}
+   {# {% for membre in trajet.membre %}
+        {{ dump(membre) }}
+    {% endfor %}#}
+
+    {#{% for etape in trajet.etapes %}
+        {{ dump(etape) }}
+    {% endfor %}#}
+
 {% endblock %}

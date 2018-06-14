@@ -7,6 +7,9 @@ use App\Entity\Etape;
 use App\Entity\Trajet;
 use App\Entity\Vehicule;
 use App\Form\RechercheTrajetType;
+use App\Repository\AdresseRepository;
+use App\Repository\EtapeRepository;
+use App\Repository\VehiculeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -42,8 +45,6 @@ class RechercheTrajetController extends Controller
             }
         }
 
-        $session->set('adresse', $adresse);
-
         return $this->render('recherche/recherche_trajet.html.twig', [
             'adresse' => $adresse,
         ]);
@@ -52,15 +53,21 @@ class RechercheTrajetController extends Controller
     /**
      * @Route("/traitement_recheche/{id}", name="traitement_recherche")
      */
-    public function traitementRecherche($id, Request $request, SessionInterface $session, EntityManagerInterface $em)
+    public function traitementRecherche($id)
     {
-        $trajet = $em->getRepository(Trajet::class)->find($id);
+        $trajet = $this->getDoctrine()->getRepository(Trajet::class)->findSelectedTrajet($id);
 
         if (!$trajet)
             throw $this->createNotFoundException('Le trajet n\'existe pas');
 
+        $vehicule = $trajet->getVehicule();
+
+        $etapes = $trajet->getEtapes();
+
         return $this->render('recherche/traitement_recherche.html.twig', [
             'trajet' => $trajet,
+            'vehicule' => $vehicule,
+            'etapes' => $etapes,
         ]);
     }
 }

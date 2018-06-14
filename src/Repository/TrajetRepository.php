@@ -22,19 +22,24 @@ class TrajetRepository extends ServiceEntityRepository
 //    /**
 //     * @return Trajet[] Returns an array of Trajet objects
 //     */
-    /*
-    public function findByExampleField($value)
+
+    public function findSelectedTrajet($trajetId)
     {
         return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
+            ->innerJoin('t.vehicule', 'v')
+            ->addSelect('v')
+            ->innerJoin('v.membre', 'm')
+            ->addSelect('m')
+            ->innerJoin('t.etapes', 'e')
+            ->addSelect('e')
+            ->innerJoin('e.adresse', 'a')
+            ->addSelect('a')
+            ->andWhere('t.id = :id')
+            ->setParameter('id', $trajetId)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getOneOrNullResult();
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?Trajet
