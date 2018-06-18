@@ -1,23 +1,58 @@
 {% extends'base.html.twig' %}
 
 {% block body %}
+    <h3>Réservation</h3>
+    <div class="accordion" id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTrajet" aria-expanded="true" aria-controls="collapseTrajet">
+                        Voir ce trajet ...
+                    </button>
+                </h5>
+            </div>
 
-        {{ dump(trajet) }}
-        {{ dump(vehicule) }}
-        {{ dump(vehicule.membre) }}
-    {% for etape in trajet.etapes %}
-        {{ dump(etape) }}
-        {{ dump(etape.adresse) }}
-    {% endfor %}
-        {#{{ dump(etape) }}#}
-        {#{{ dump(trajet.etape.adresse) }}#}
+            <div id="collapseTrajet" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Ce trajet est publié depuis le {{ trajet.createdAt|date("d/m/Y") }}
+                    <br>
 
-   {# {% for membre in trajet.membre %}
-        {{ dump(membre) }}
-    {% endfor %}#}
-
-    {#{% for etape in trajet.etapes %}
-        {{ dump(etape) }}
-    {% endfor %}#}
-
+                    {% for etape in trajet.etapes %}
+                        Prix par place {{ etape.prixetape }} FGN
+                        <br>
+                        De {{ etape.adresse.lieudepart }} à {{ etape.adresse.lieudestination }} le {{ trajet.datedepart|date("d/m/Y", "Africa/Conakry") }} à {{ trajet.datedepart|date("H:m") }}
+                    {% endfor %}
+                    <br>
+                    <a
+                            type="button"
+                            class="btn btn-success"
+                            href="{{ path('reservation', {'id': trajet.id}) }}"
+                    >
+                        Reservez ce trajet
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseConducteur" aria-expanded="false" aria-controls="collapseConducteur">
+                        Voir le conducteur ...
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseConducteur" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    {{ vehicule.membre.prenom }}
+                    <br>
+                    Véhicule
+                    <br>
+                    {{ vehicule.marque.nom }}
+                    <br>
+                    {{ vehicule.couleur }}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+

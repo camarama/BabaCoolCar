@@ -53,7 +53,7 @@ class RechercheTrajetController extends Controller
     /**
      * @Route("/traitement_recheche/{id}", name="traitement_recherche")
      */
-    public function traitementRecherche($id)
+    public function traitementRecherche($id, SessionInterface $session)
     {
         $trajet = $this->getDoctrine()->getRepository(Trajet::class)->findSelectedTrajet($id);
 
@@ -64,6 +64,10 @@ class RechercheTrajetController extends Controller
 
         $etapes = $trajet->getEtapes();
 
+        $session->set('trajet', $trajet);
+        $session->set('vehicule', $vehicule);
+        $session->set('etapes', $etapes);
+
         return $this->render('recherche/traitement_recherche.html.twig', [
             'trajet' => $trajet,
             'vehicule' => $vehicule,
@@ -71,63 +75,3 @@ class RechercheTrajetController extends Controller
         ]);
     }
 }
-
-/*
-if ($request->isMethod('POST'))
-{
-    $form->handleRequest($request);
-
-    if ($form->isValid() && $form->isSubmitted())
-    {
-        $recherche1 = $form->get('depart')->getData();
-        $recherche2 = $form->get('destination')->getData();
-
-        $adresses = $em->getRepository(Adresse::class)->rechercheTrajet($recherche1, $recherche2);
-
-        if (!$adresses)
-            throw $this->createNotFoundException('pas de trajet dispo !!!');
-    }
-
---------------------------------------------------------------------------------------------------------------------------
-
-if (!$session->has('trajet')) $session->set('trajet', $trajet);
-
-        $trajet = $em->getRepository(Trajet::class)->find($id);
-
-//        dump($trajet); die();
-
-        $vehicule = $em->getRepository(Vehicule::class);
-//        dump($session->get('trajet')); die();
-
-        /*if ()) {
-
-        }
-        else
-            throw $this->createNotFoundException('la page n\'existe pas');*/
-
-//        dump($trajet); die();
-
-/*if (array_key_exists($id, $trajet))
-    $session->set('trajet', $trajet);
-else
-    throw $this->createNotFoundException('la page est introuvable');*/
-
-
-/* if ($this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY')) {
-
-     return $this->redirectToRoute('fos_user_security_login');
- } else {
-     $resa = new Reservation();
-     $resa->setTrajet($trajet);
-     $resa->setMembre($this->getUser());
-     $resa->setDateresa(new \DateTime('now'));
-     $resa->setAnnuleresa(0);
-     $resa->setValideresa(1);
-     $em->persist($resa);
-
-     $em->flush();
- }
-
- $session->set('resa',$resa);*/
-
-//        dump($trajet); die();
