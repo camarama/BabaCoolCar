@@ -18,18 +18,27 @@
                     <br>
 
                     {% for etape in trajet.etapes %}
+                        De {{ etape.adresse.lieudepart }} à {{ etape.adresse.lieudestination }} le {{ trajet.datedepart|date("d/m/Y", "Africa/Conakry") }} à {{ trajet.datedepart|date("H:m") }}
+                        <br>
                         Prix par place {{ etape.prixetape }} FGN
                         <br>
-                        De {{ etape.adresse.lieudepart }} à {{ etape.adresse.lieudestination }} le {{ trajet.datedepart|date("d/m/Y", "Africa/Conakry") }} à {{ trajet.datedepart|date("H:m") }}
+                        <form action="{{ path('traitementReservation', {'id': trajet.id}) }}">
+                            je choisis
+                            <select name="place">
+                                {% for i in 1..trajet.nbplace %}
+                                    <option value="{{ i }}">
+                                        {{ i }} {% if i == 1 %} place {% else %} places {% endif %}
+                                        sur {{ trajet.nbplace }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <br>
+                            <br>
+                            <button class="btn btn-success">Réservez ce trajet</button>
+                        </form>
                     {% endfor %}
-                    <br>
-                    <a
-                            type="button"
-                            class="btn btn-success"
-                            href="{{ path('reservation', {'id': trajet.id}) }}"
-                    >
-                        Reservez ce trajet
-                    </a>
+
+
                 </div>
             </div>
         </div>

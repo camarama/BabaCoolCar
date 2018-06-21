@@ -44,7 +44,14 @@ class TrajetRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
-
+    public function findArray($array)
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.id IN (:array)')
+            ->setParameter('array', $array)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
     /*
     public function findOneBySomeField($value): ?Trajet
     {

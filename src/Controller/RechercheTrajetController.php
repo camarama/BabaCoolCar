@@ -3,13 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Adresse;
-use App\Entity\Etape;
 use App\Entity\Trajet;
-use App\Entity\Vehicule;
 use App\Form\RechercheTrajetType;
-use App\Repository\AdresseRepository;
-use App\Repository\EtapeRepository;
-use App\Repository\VehiculeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -28,7 +23,7 @@ class RechercheTrajetController extends Controller
     /**
      * @Route("/recherche_trajet", name="recherche-trajet")
      */
-    public function rechercheTrajet(EntityManagerInterface $em, Request $request)
+    public function rechercheTrajet(EntityManagerInterface $em, Request $request, SessionInterface $session)
     {
         $form = $this->createForm(RechercheTrajetType::class);
 
@@ -56,12 +51,7 @@ class RechercheTrajetController extends Controller
     public function traitementRecherche($id, SessionInterface $session)
     {
         $trajet = $this->getDoctrine()->getRepository(Trajet::class)->findSelectedTrajet($id);
-
-        if (!$trajet)
-            throw $this->createNotFoundException('Le trajet n\'existe pas');
-
         $vehicule = $trajet->getVehicule();
-
         $etapes = $trajet->getEtapes();
 
         $session->set('trajet', $trajet);

@@ -12,26 +12,26 @@
                         <p class="h4">{{ etape.prixetape }} FG
                             <small class="text-muted">- par place</small>
                         </p>
+                    </h5>
+                    <form action="{{ path('traitement_recherche', {'id' : etape.trajet.id}) }}" method="get">
                         {% if etape.trajet.nbplace > 1 %}
                             <p class="text-center">
-                                <a class="btn btn-primary"
-                                   href="{{ path('traitement_recherche', {'id' : etape.trajet.id}) }}">
+                                <button class="btn btn-primary">
                                     {{ etape.trajet.nbplace }}
                                     places restantes
-                                </a>
+                                </button>
                             </p>
                         {% elseif etape.trajet.nbplace < 1 %}
                             <p class="text-center">{{ etape.trajet.nbplace }} Complet</p>
                         {% else %}
                             <p class="text-center">
-                                <a class="btn btn-primary"
-                                   href="{{ path('traitement_recherche', {'id' : etape.trajet.id}) }}">
+                                <button class="btn btn-primary">
                                     {{ etape.trajet.nbplace }}
                                     place restante
-                                </a>
+                                </button>
                             </p>
                         {% endif %}
-                    </h5>
+                    </form>
                 </div>
             </div>
         {% endfor %}
