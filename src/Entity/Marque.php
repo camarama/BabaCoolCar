@@ -29,7 +29,7 @@ class Marque
     private $vehicules;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Modele", mappedBy="marque")
+     * @ORM\OneToMany(targetEntity="App\Entity\Modele", mappedBy="marque", cascade={"persist"})
      */
     private $modeles;
 

@@ -38,7 +38,7 @@ class Etape
     private $trajet;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Adresse", inversedBy="etapes")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Adresse", inversedBy="etapes", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $adresse;

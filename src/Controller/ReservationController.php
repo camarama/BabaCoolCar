@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Membre;
 use App\Entity\Reservation;
 use App\Entity\Trajet;
 use Doctrine\ORM\EntityManagerInterface;
@@ -18,28 +19,25 @@ class ReservationController extends Controller
     public function reservationTrajet($id, SessionInterface $session, Request $request)
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-        $user = $this->getUser()->getId();
+        $user = $this->getUser();
 
-        if (!$session->has('reservation')) $session->set('reservation', array());
-            $reservation = $session->get('reservation');
+        if (!$session->has('trajet')) $session->set('trajet', array());
+            $trajet = $session->get('trajet');
 
-        if (array_key_exists($id, $reservation)){
-            if ($request->query->get('place') != null) $reservation[$id] = $request->query->get('place');
+        $trajetArray = (array) $trajet;
+
+        if (array_key_exists($id, $trajetArray)){
+            if ($request->query->get('place') != null) $trajetArray[$id] = $request->query->get('place');
         } else {
             if ($request->query->get('place') != null)
-                $reservation[$id] = $request->query->get('place');
+                $trajetArray[$id] = $request->query->get('place');
             else
-                $reservation[$id] = 1;
+                $trajetArray[$id] = 1;
         }
 
-        $session->remove('trajet');
-        $session->remove('vehicule');
-        $session->remove('etapes');
-        $session->set('reservation', $reservation);
+        $session->set('place', $trajetArray[$id]);
         $session->set('user', $user);
-        /*dump(array_keys($session->get('reservation')));
-        dump($session);
-        die();*/
+        
         return $this->redirect($this->generateUrl('reservation'));
     }
 
@@ -49,17 +47,17 @@ class ReservationController extends Controller
     public function enregistrementTrajet(SessionInterface $session, EntityManagerInterface $em)
     {
         $user = $session->get('user');
+        $trajetR = $session->get('trajet');
 
-        if (!$session->has('reservation')) $session->set('reservation', array());
-        $trajet = $this->getDoctrine()->getRepository(Trajet::class)->findArray(array_keys($session->get('reservation')));
+        $membre = $this->getDoctrine()->getRepository(Membre::class)->find($user);
+        $trajet = $this->getDoctrine()->getRepository(Trajet::class)->find($trajetR);
 
-//        dump($trajet); die();
         $resa = new Reservation();
         $resa->setDateresa(new \DateTime('now'));
         $resa->setValideresa(1);
         $resa->setAnnuleresa(0);
         $resa->setTrajet($trajet);
-        $resa->setMembre($user);
+        $resa->setMembre($membre);
         $em->persist($resa);
 
         $em->flush();

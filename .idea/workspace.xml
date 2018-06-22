@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="74e6b5b7-ff3f-44f4-94f9-6880afc51918" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" afterPath="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Etape.php" afterPath="$PROJECT_DIR$/src/Entity/Etape.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Marque.php" afterPath="$PROJECT_DIR$/src/Entity/Marque.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Trajet.php" afterPath="$PROJECT_DIR$/src/Entity/Trajet.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Vehicule.php" afterPath="$PROJECT_DIR$/src/Entity/Vehicule.php" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MembreRepository.php" afterPath="$PROJECT_DIR$/src/Repository/MembreRepository.php" />
       <change beforePath="$PROJECT_DIR$/src/Repository/TrajetRepository.php" afterPath="$PROJECT_DIR$/src/Repository/TrajetRepository.php" />
-      <change beforePath="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" afterPath="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" afterPath="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +26,7 @@
       <file leaf-file-name="RechercheTrajetController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/RechercheTrajetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
+            <state relative-caret-position="0">
               <caret line="52" column="79" lean-forward="false" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="TrajetRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/TrajetRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="29" />
+            <state relative-caret-position="367">
+              <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -46,7 +48,7 @@
       <file leaf-file-name="traitement_recherche.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="595">
               <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
@@ -56,21 +58,61 @@
       <file leaf-file-name="ReservationController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ReservationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+            <state relative-caret-position="322">
+              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
-                <element signature="e#34#61#0#PHP" expanded="true" />
-                <element signature="e#2291#2326#1#PHP" expanded="true" />
+                <element signature="e#34#56#0#PHP" expanded="true" />
+                <element signature="e#2103#2138#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Reservation.php">
+      <file leaf-file-name="MembreRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/MembreRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+            <state relative-caret-position="356">
+              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trajet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Trajet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="45" column="93" lean-forward="false" selection-start-line="45" selection-start-column="93" selection-end-line="45" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vehicule.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Vehicule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="37" column="99" lean-forward="false" selection-start-line="37" selection-start-column="99" selection-end-line="37" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Etape.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="40" column="97" lean-forward="false" selection-start-line="40" selection-start-column="97" selection-end-line="40" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Marque.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Marque.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="31" column="94" lean-forward="false" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -101,15 +143,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Form/ModeleType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Utilisateur.php" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/VehiculeController.php" />
         <option value="$PROJECT_DIR$/src/Form/VehiculeType.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
         <option value="$PROJECT_DIR$/templates/__partials/header.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Marque.php" />
         <option value="$PROJECT_DIR$/src/Entity/Modele.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -142,15 +181,18 @@
         <option value="$PROJECT_DIR$/templates/test/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/Repository/AdresseRepository.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Vehicule.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/ORM/TrajetFixtures.php" />
         <option value="$PROJECT_DIR$/templates/reservation/reservation.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Reservation.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Trajet.php" />
         <option value="$PROJECT_DIR$/templates/recherche/recherche_trajet.html.twig" />
         <option value="$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/RechercheTrajetController.php" />
         <option value="$PROJECT_DIR$/src/Repository/TrajetRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Reservation.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Trajet.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Vehicule.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Etape.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Marque.php" />
+        <option value="$PROJECT_DIR$/src/Repository/MembreRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/ReservationController.php" />
       </list>
     </option>
@@ -312,6 +354,12 @@
               <item name="covoit" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="covoit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="covoit" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="covoit" type="b2602c69:ProjectViewProjectNode" />
@@ -489,11 +537,12 @@
       <workItem from="1529393778158" duration="16906000" />
       <workItem from="1529500637492" duration="18700000" />
       <workItem from="1529564624572" duration="18856000" />
+      <workItem from="1529656737542" duration="14239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423957000" />
+    <option name="totallyTimeSpent" value="438196000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,7 +557,7 @@
     <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14447807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14674735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
@@ -566,20 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -782,34 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Vehicule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1690">
-          <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Adresse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-180">
           <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Trajet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="160" column="5" lean-forward="false" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -857,17 +868,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/recherche/traitement_recherche.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="595">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
@@ -875,7 +878,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RechercheTrajetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
+        <state relative-caret-position="0">
           <caret line="52" column="79" lean-forward="false" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
@@ -885,19 +888,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/TrajetRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="29" />
+        <state relative-caret-position="367">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="40" column="81" lean-forward="false" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Trajet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="45" column="93" lean-forward="false" selection-start-line="45" selection-start-column="93" selection-end-line="45" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Vehicule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="37" column="99" lean-forward="false" selection-start-line="37" selection-start-column="99" selection-end-line="37" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="97" lean-forward="false" selection-start-line="40" selection-start-column="97" selection-end-line="40" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Marque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="94" lean-forward="false" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/MembreRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ReservationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+        <state relative-caret-position="322">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding>
-            <element signature="e#34#61#0#PHP" expanded="true" />
-            <element signature="e#2291#2326#1#PHP" expanded="true" />
+            <element signature="e#34#56#0#PHP" expanded="true" />
+            <element signature="e#2103#2138#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -29,13 +29,13 @@ class Vehicule
     private $immatriculation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Membre", inversedBy="vehicules")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Membre", inversedBy="vehicules", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $membre;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Marque", inversedBy="vehicules")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Marque", inversedBy="vehicules", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $marque;

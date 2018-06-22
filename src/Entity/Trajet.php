@@ -37,13 +37,13 @@ class Trajet
     private $reservations;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Vehicule", inversedBy="trajets")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Vehicule", inversedBy="trajets", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $vehicule;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Etape", mappedBy="trajet")
+     * @ORM\OneToMany(targetEntity="App\Entity\Etape", mappedBy="trajet", cascade={"persist"})
      */
     private $etapes;
 
